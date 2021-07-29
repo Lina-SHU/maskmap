@@ -1,0 +1,64 @@
+#map {
+  height: 100vh;
+  z-index: 1;
+}
+
+.home {
+  position: relative;
+}
+
+.toolbox {
+  position: absolute;
+  top: 0;
+  left: -350px;
+  height: 100vh;
+  width: 350px;
+  overflow-y: auto;
+  z-index: 2;
+  transition: all 1s;
+  a {
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+}
+
+.toolbox.show{
+  left: 0;
+}
+
+.bg-maskAdult{
+  background: $primary;
+}
+
+.bg-maskChild{
+  background: #FFA573;
+}
+
+.bg-noMask{
+  background: #A5A5A5;
+}
+
+.openModal{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background: $primary;
+  padding: 20px 5px;
+  border-radius: 0 5px 5px 0;
+  z-index: 10;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  &:hover{
+    cursor: pointer;
+  }
+  i{
+    color: $white;
+  }
+}
+
+.openModal.show{
+  left: 350px;
+}
